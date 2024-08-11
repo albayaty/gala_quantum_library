@@ -1,6 +1,6 @@
 # GALA-*n* Quantum Library
 
-GALA-*n* is a quantum library consisting of **Generic Architecture of Layout-Aware *n*-bit gates**. GALA-*n* quantum library is proposed for cost-effective quantum gates transpilation, based on the layouts and the number of *n* neighboring physical qubits for IBM quantum computers, where *n* >= 3 qubits. All *n*-bit gates of GALA-*n* quantum library are designed using the geometrical approach of the Bloch sphere, based on the visual representations of the rotational quantum operations for IBM single-qubit native gates (X, √X, and RZ) and IBM double-qubit native gate (CX or ECR). In other words, the Bloch sphere is utilized in the GALA-*n* quantum library as a **geometrical design tool**.
+GALA-*n* is a quantum library consisting of **Generic Architecture of Layout-Aware *n*-bit gates**. GALA-*n* quantum library is proposed for cost-effective quantum gates transpilation, based on the layouts and the number of *n* neighboring physical qubits for IBM quantum computers, where *n* >= 3 qubits. All *n*-bit gates of GALA-*n* quantum library are designed using the geometrical approach of the Bloch sphere, based on the visual representations of the rotational quantum operations for IBM single-qubit basis gates (X, √X, and RZ) and IBM double-qubit basis gate (CX or ECR). In other words, the Bloch sphere is utilized in the GALA-*n* quantum library as a **geometrical design tool**.
 
 GALA-*n* quantum library has a set of cost-effective *n*-bit gates, including:
 
@@ -11,7 +11,7 @@ GALA-*n* quantum library has a set of cost-effective *n*-bit gates, including:
 
 The cost-effectiveness of these *n*-bit gates of GALA-*n* quantum library comes from the following essential configurations:
 
-1. All control qubits of an *n*-bit gate are only connected to the target qubit, without any mutual connection among them. For instance, all control qubits are connected to a target qubit using Feynman (CX or CNOT) gates.
+1. All control qubits of an *n*-bit gate are only connected to the target qubit, without any mutual connection among them. For instance, all control qubits are connected to a target qubit using Feynman (CX) gates.
 2. The target qubit of an *n*-bit gate can be replaced with any of the control qubits. For instance, the target qubit can be mapped in the middle among the control qubits, to fit the layout of an IBM quantum computer efficiently.
 3. Based on (1) and (2), SWAP gates are no longer required to connect the non-neighboring physical qubits of an IBM quantum computer for the final transpiled *n*-bit gates.
 
