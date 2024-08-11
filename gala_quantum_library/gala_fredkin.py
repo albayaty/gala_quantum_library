@@ -1,3 +1,5 @@
+from qiskit import QuantumCircuit
+
 # ----------------------------------------------------------------------
 # The n-bit Fredkin gates of GALA-n:
 # controlled-SWAP (CSWAP)
