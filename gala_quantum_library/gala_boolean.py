@@ -1,3 +1,5 @@
+import numpy as np
+
 # ----------------------------------------------------------------------
 # The n-bit Boolean gates of GALA-n:
 # AND, NAND, OR, NOR, Implication (IMP), and Inhibition (INH)
