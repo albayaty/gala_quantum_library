@@ -5,18 +5,17 @@
 
 def GALA_Fredkin(n, as_block=False, statistics=False):
     """
-    This function constructs the n-bit Fredkin gate of GALA-n quantum library,
-    where n >= 3 qubits.
+    This function constructs the n-bit Fredkin gate of GALA-n quantum library, where n >= 3 qubits.
     
     Parameters
-	----------
+    ----------
     n: the total number of qubits (n-2 controls and 2 targets),
     as_block: construct a gate as a quantum circuit or a block, its default value is False, and
     statistics: print the final counts of H, RZ, and CX gates, as a final quantum cost.
     
     Returns
-	-------
-	The n-bit Fredkin gate of GALA-n as a quantum circuit or a block.
+    -------
+    The n-bit Fredkin gate of GALA-n as a quantum circuit or a block.
     Note that the target qubits are the last two indexed qubits in the n qubits.
     
     For more information, please read our GALA-n paper, 
@@ -38,12 +37,12 @@ def GALA_Fredkin(n, as_block=False, statistics=False):
     GALA_gate.cx( target2, target1 )
     
     if statistics:
-        print(f"\n⟩⟩⟩ Statistics (quantum cost) of {n}-bit Fredkin gate (GALA-{n}):")
-        print(f"\t H gates = 2")
-        print(f"\tRZ gates = {2**(n-1)}")
-        print(f"\tCX gates = {(2**(n-1))+1}\n")
+	    print(f"\n⟩⟩⟩ Statistics (quantum cost) of {n}-bit Fredkin gate (GALA-{n}):")
+	    print(f"\t H gates = 2")
+	    print(f"\tRZ gates = {2**(n-1)}")
+	    print(f"\tCX gates = {(2**(n-1))+1}\n")
     
     if as_block:
-        return GALA_gate.to_gate(label="Fredkin gate\n\n(GALA-"+str(n)+")")
+	    return GALA_gate.to_gate(label="Fredkin gate\n\n(GALA-"+str(n)+")")
     else:
-        return GALA_gate
+	    return GALA_gate
