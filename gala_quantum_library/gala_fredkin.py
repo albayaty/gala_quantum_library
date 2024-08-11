@@ -1,5 +1,3 @@
-import numpy as np
-
 # ----------------------------------------------------------------------
 # The n-bit Fredkin gates of GALA-n:
 # controlled-SWAP (CSWAP)
