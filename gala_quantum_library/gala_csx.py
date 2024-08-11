@@ -1,3 +1,5 @@
+import numpy as np
+
 # ----------------------------------------------------------------------
 # The n-bit controlled square-root of Pauli-X (X) gates of GALA-n:
 # controlled-√X (as controlled-V) and controlled-√X† (as controlled-V†)
