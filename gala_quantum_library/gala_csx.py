@@ -1,4 +1,5 @@
 from qiskit import QuantumCircuit
+from gala_quantum_library import *
 import numpy as np
 
 # ----------------------------------------------------------------------
