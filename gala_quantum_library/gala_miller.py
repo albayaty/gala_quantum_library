@@ -1,4 +1,5 @@
 from qiskit import QuantumCircuit
+from gala_quantum_library import *
 
 # ----------------------------------------------------------------------
 # The n-bit Miller gates of GALA-n:
