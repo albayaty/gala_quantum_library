@@ -1,3 +1,5 @@
+from qiskit import QuantumCircuit
+
 # ----------------------------------------------------------------------
 # The n-bit Miller gates of GALA-n:
 # quantum distance gates
