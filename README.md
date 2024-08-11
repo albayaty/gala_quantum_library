@@ -1,6 +1,6 @@
 # GALA-*n* Quantum Library
 
-GALA-*n* is a quantum library consisting of **Generic Architecture of Layout-Aware *n*-bit gates**. GALA-*n* quantum library is proposed for cost-effective quantum gates transpilation, based on the layouts and the number of *n* neighboring physical qubits for IBM quantum computers, where *n* >= 3 qubits. All *n*-bit gates of GALA-*n* quantum library are designed using the geometrical approach of the Bloch sphere, i.e., from the visual representations of the rotational quantum operations for IBM native gates (X, √X, RZ, and CX). In other words, the Bloch sphere is utilized in the GALA-*n* quantum library as a **geometrical design tool**.
+GALA-*n* is a quantum library consisting of **Generic Architecture of Layout-Aware *n*-bit gates**. GALA-*n* quantum library is proposed for cost-effective quantum gates transpilation, based on the layouts and the number of *n* neighboring physical qubits for IBM quantum computers, where *n* >= 3 qubits. All *n*-bit gates of GALA-*n* quantum library are designed using the geometrical approach of the Bloch sphere, i.e., from the visual representations of the rotational quantum operations for IBM single-qubit native gates (X, √X, and RZ) and IBM double-qubit native gate (CX or ECR). In other words, the Bloch sphere is utilized in the GALA-*n* quantum library as a **geometrical design tool**.
 
 GALA-*n* quantum library has a set of cost-effective *n*-bit gates, including:
 
