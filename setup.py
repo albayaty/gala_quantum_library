@@ -10,7 +10,7 @@ setup(
     author_email = 'albayaty@pdx.edu',
     url = 'https://github.com/albayaty/',
     download_url = 'https://github.com/albayaty/gala_quantum_library/',
-    keywords = ['quantum computing', 'quantum gates', 'quantum layouts', 'Bloch sphere'],
+    keywords = ['quantum computing', 'quantum gates', 'quantum layouts', 'Bloch sphere', 'transpilation'],
     classifiers = [
 		'Development Status :: 5 - Production/Stable',
 		'Intended Audience :: Science/Research',
