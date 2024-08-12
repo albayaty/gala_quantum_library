@@ -66,7 +66,7 @@ Next, the GALA-*n* quantum library consists of four callable functions as follow
 
     `n`: the total number of qubits (*n*-1 controls and 1 target),
     
-    `gate`: the name of an *n*-bit Boolean gate: `"AND"` as the default gate, `"NAND"`, `"OR"`, `"NOR"`, `"IMP"` as the implication, and `"INH"` as the inhibition,
+    `gate`: the name of an *n*-bit Boolean gate: `"AND"` as the default gate, `"NAND"`, `"OR"`, `"NOR"`, `"IMP"` as the implication, or `"INH"` as the inhibition,
     
     `as_block`: construct a gate as a quantum circuit or a block, its default value is `False`, and
 
@@ -116,7 +116,7 @@ Next, the GALA-*n* quantum library consists of four callable functions as follow
 
     `n`: the total number of qubits (*n*-1 controls and 1 target),
     
-    `gate`: the name of an *n*-bit controlled square-root of X gate: `"CSX"` for the *n*-bit controlled-√X (controlled-V) gate as a default, and `"CSXdg"` for the *n*-bit controlled-√X† (controlled-V†) gate,
+    `gate`: the name of an *n*-bit controlled square-root of X gate: `"CSX"` for the *n*-bit controlled-√X (controlled-V) gate as a default, or `"CSXdg"` for the *n*-bit controlled-√X† (controlled-V†) gate,
     
     `as_block`: construct a gate as a quantum circuit or a block, its default value is `False`, and
 
