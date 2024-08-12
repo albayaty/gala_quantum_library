@@ -1,13 +1,15 @@
 # GALA-*n* Quantum Library
 
-GALA-*n* is a quantum library of **Generic Architecture of Layout-Aware *n*-bit gates**. GALA-*n* quantum library is proposed for cost-effective quantum gates transpilation, based on the layouts and the number of *n* neighboring physical qubits for IBM quantum computers, where *n* >= 3 qubits. All *n*-bit gates of GALA-*n* quantum library are designed using the geometrical approach of the Bloch sphere, based on the visual representations of the rotational quantum operations for IBM single-qubit basis gates (X, √X, and RZ) and IBM double-qubit basis gate (CX or ECR). In other words, the Bloch sphere is utilized in the GALA-*n* quantum library as a **geometrical design tool**.
+GALA-*n* is a quantum library of **Generic Architecture of Layout-Aware *n*-bit gates**. GALA-*n* quantum library is proposed for cost-effective quantum gates transpilation, based on the layouts and the number of *n* neighboring physical qubits for IBM quantum computers, where *n* >= 3 qubits. All *n*-bit gates of GALA-*n* quantum library are designed using the geometrical approach of the Bloch sphere, based on the visual representations of the rotational quantum operations for IBM single-qubit basis gates (X, √X, and RZ) and IBM double-qubit basis gate (CX or ECR). In other words, the Bloch sphere is utilized in the GALA-*n* quantum library as a **geometrical design tool**, through the utilization of the XY-plane (as the top-view of the Bloch sphere) as illustrated below.
+
+![xy-plane](images/xy-plane.png)
 
 GALA-*n* quantum library has a set of cost-effective *n*-bit gates, including:
 
-1. ***n*-bit Boolean gates:** AND, NAND, OR, NOR, implication, and inhibition gates, where *n* >= 3 qubits.
-2. ***n*-bit Fredkin gates:** controlled-SWAP (CSWAP) gates, where *n* >= 3 qubits.
-3. ***n*-bit Miller gates:** quantum distance gates, where *n* >= 3 qubits.
-4. ***n*-bit controlled square-root of Pauli-X (X) gates:** controlled-√X (as controlled-V) and controlled-√X† (as controlled-V†) gates, where *n* >= 2 qubits.
+* ***n*-bit Boolean gates:** AND, NAND, OR, NOR, implication, and inhibition gates, where *n* >= 3 qubits.
+* ***n*-bit Fredkin gates:** controlled-SWAP (CSWAP) gates, where *n* >= 3 qubits.
+* ***n*-bit Miller gates:** quantum distance gates, where *n* >= 3 qubits.
+* ***n*-bit controlled square-root of Pauli-X (X) gates:** controlled-√X (as controlled-V) and controlled-√X† (as controlled-V†) gates, where *n* >= 2 qubits.
 
 The cost-effectiveness of these *n*-bit gates of GALA-*n* quantum library comes from the following essential configurations:
 
@@ -158,7 +160,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
 	    RZ gates = 4
 	    CX gates = 3
     ```
-    ![figure1](https://github.com/user-attachments/assets/ee45c634-f97b-42d8-97f9-d4e7db143b54)
+    ![figure1](images/figure1.png)
 
 2. Construct the 3-bit AND gate as a block without statistics:
     ```python
@@ -167,7 +169,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     qc.compose( GALA_Boolean(n=3, gate="AND", as_block=True, statistics=False), qubits=[0,1,2], inplace=True )
     qc.draw(output='mpl', style='bw', scale=1.0, fold=-1);
     ```    
-    ![figure2](https://github.com/user-attachments/assets/87b46aa6-e248-4150-b05d-74ac318819ce)
+    ![figure2](images/figure2.png)
 
 3. Construct the 3-bit AND gate as a quantum circuit, and map its target qubit in the middle between the two control qubits:
     ```python
@@ -176,7 +178,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     qc.compose( GALA_Boolean(n=3, gate="AND", as_block=False, statistics=False), qubits=[0,2,1], inplace=True )
     qc.draw(output='mpl', style='bw', scale=1.0, fold=-1);
     ```    
-    ![figure3](https://github.com/user-attachments/assets/15369037-f05a-4c93-9f4e-6d46d5dbf395)
+    ![figure3](images/figure3.png)
 
 4. Assume the existence of an arbitrary Boolean oracle of 5 qubits, append the 4-bit AND gate to it, where its control qubits should be mapped to the qubits' indices [0, 1, 4] and its target qubit should be mapped to the qubit's index [3] of such an oracle:
     ```python
@@ -186,7 +188,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     qc.compose( GALA_Boolean(n=4, gate="AND", as_block=False, statistics=False), qubits=[0,1,4,3], inplace=True )
     qc.draw(output='mpl', style='bw', scale=1.0, fold=-1);
     ```
-    ![figure4](https://github.com/user-attachments/assets/ecd7f734-b13f-47b3-be84-2969d222340c)
+    ![figure4](images/figure4.png)
 
 5. Construct the 5-bit Fredkin gate as a quantum circuit, where its first and second targets utilize the qubits' indices [3, 4], respectively:
     ```python
@@ -195,7 +197,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     qc.compose( GALA_Fredkin(n=5, as_block=False, statistics=False), qubits=[0,1,2,3,4], inplace=True )
     qc.draw(output='mpl', style='bw', scale=1.0, fold=-1);
     ```
-    ![figure5](https://github.com/user-attachments/assets/5dd8defb-fde7-4ef6-afd3-8db126030851)
+    ![figure5](images/figure5.png)
 
 6. Construct the 6-bit Miller gate as a quantum circuit with statistics, where its target utilizes the qubit's index [3]:
     ```python
@@ -210,7 +212,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
 	    RZ gates = 32
 	    CX gates = 41
     ```
-    ![figure6](https://github.com/user-attachments/assets/354eff37-0f36-4277-b5de-451486ca52c7)
+    ![figure6](images/figure6.png)
 
 7. Construct the 2-bit controlled-√X† (as a controlled-V†) gate as a quantum circuit:
     ```python
@@ -219,7 +221,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     qc.compose( GALA_CSX(n=2, gate="CSXdg", as_block=False, statistics=False), qubits=[0,1], inplace=True )
     qc.draw(output='mpl', style='bw', scale=1.0, fold=-1);
     ```
-    ![figure7](https://github.com/user-attachments/assets/7f067ffa-ddb9-45e1-999d-94da557c59ca)
+    ![figure7](images/figure7.png)
 
 8. Construct the 4-bit controlled-√X (as a controlled-V) gate as a quantum circuit, where its target utilizes the qubit's index [1]:
     ```python
@@ -228,7 +230,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     qc.compose( GALA_CSX(n=4, gate="CSX", as_block=False, statistics=False), qubits=[0,3,2,1], inplace=True )
     qc.draw(output='mpl', style='bw', scale=1.0, fold=-1);
     ```
-    ![figure8](https://github.com/user-attachments/assets/5182a37a-c34a-42fe-a531-9cbb5c3feaac)
+    ![figure8](images/figure8.png)
 
 9. Repeat the previous Example (8) as a block with statistics:
     ```python
@@ -243,7 +245,7 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
 	    RZ gates = 10
 	    CX gates = 7
     ```
-    ![figure9](https://github.com/user-attachments/assets/879d8d2b-e776-4279-af74-c1e847ad8906)
+    ![figure9](images/figure9.png)
 
 10. Construct Grover's algorithm to solve an arbitrary Boolean oracle in POS structure, as (*a* + *b* + ¬*c*)(¬*a* + *c*)(¬*b* + *c*), using our Grover controlled-diffuser (*CU<sub>s<sub>*) [[GitHub](https://github.com/albayaty/grover_controlled_diffuser/)], in one Grover iteration (loop), and then measure the outcomes as the highest probabilities as solutions. It is noteworthy to observe the following facts:
     * The Qiskit `inverse()` instruction is required to be attached to an *n*-bit gate of GALA-*n* quantum library, when building the mirror (uncomputing) part of any Boolean oracle.
@@ -286,8 +288,8 @@ Then, let's construct and use the cost-effective *n*-bit gates of GALA-*n* quant
     counts  = results.get_counts(0)
     plot_distribution(counts, bar_labels=True, title="Solutions");
     ```
-    ![figure10a](https://github.com/user-attachments/assets/59018a6f-df31-45de-bb70-2ab0b67977dc)
-    ![figure10b](https://github.com/user-attachments/assets/4a8873f2-5722-4773-8a04-8d6af4633f4c)
+    ![figure10a](images/figure10a.png)
+    ![figure10b](images/figure10b.png)
 
 ## Reference
 
