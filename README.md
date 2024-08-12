@@ -126,7 +126,7 @@ Next, the GALA-*n* quantum library consists of four callable functions as follow
 
 ## Examples
 
-Initially, import the required Python and Qiskit libraries. If you would like to execute Grover's algorithm, it is preferable to import our `grover_controlled_diffuser` [[GitHub](https://github.com/albayaty/grover_controlled_diffuser/)], because this controlled-diffuser successfully searches for all solutions for Boolean oracles, since the standard Grover diffuser fails to find correct solutions for Boolean oracles in some logical structures!
+Initially, import the required Python and Qiskit libraries, including our `gala_quantum_library`. If you would like to execute Grover's algorithm, it is preferable to import our `grover_controlled_diffuser` [[GitHub](https://github.com/albayaty/grover_controlled_diffuser/)], because this controlled-diffuser successfully searches for all solutions for Boolean oracles, since the standard Grover diffuser fails to find correct solutions for Boolean oracles in some logical structures!
 ```python
 from qiskit import *
 from qiskit_aer import AerSimulator
