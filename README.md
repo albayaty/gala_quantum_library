@@ -51,7 +51,7 @@ First of all, please be sure that the following prerequisite packages have been 
 - `qiskit_aer` (simulating quantum circuits locally).
 - `qiskit_ibm_runtime` (transpiling and executing quantum circuits on IBM quantum computers).
 - `qiskit.visualization` (plotting histograms, distributions, etc.).
-- `numpy` (mathematical constants and calculations)
+- `numpy` (mathematical constants and calculations).
 - `matplotlib` (drawing quantum circuits).
 
 Next, the GALA-*n* quantum library consists of four callable functions as follows.
