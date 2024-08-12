@@ -124,6 +124,11 @@ Next, the GALA-*n* quantum library consists of four callable functions as follow
     
     The `GALA_CSX` function returns the *n*-bit controlled square-root of X gate of GALA-*n* as a quantum circuit or a block. Note that the target qubit is the last indexed qubits in the *n* qubits.
 
+Various *n*-bit gates of GALA-*n* quantum library can be constructed for specific Boolean and Phase purposes, such as OR-AND-OR (as a POS structure), AND-OR-AND (as a SOP structure), AND-XOR-AND (as an ESOP structure), CNF-XOR SAT, DNF-XOR SAT, majority, implication-inhibition, inhibition-implication, quantum Boolean-based gates for Boolean oracles, quantum Phase-based gates for Phase oracles, just to name a few.
+
+We introduce GALA-*n* as an open and generic quantum library for prospective quantum computing research, to develop interesting and cost-effective *n*-bit quantum gates, which can be easily adapted with different layouts of *n* neighboring physical qubits for superconducting quantum systems, e.g., IBM, Google, and Rigetti.
+
+
 ## Examples
 
 Initially, import the required Python and Qiskit libraries, including our `gala_quantum_library`. If you would like to execute Grover's algorithm, it is preferable to import our `grover_controlled_diffuser` [[GitHub](https://github.com/albayaty/grover_controlled_diffuser/)], because this controlled-diffuser successfully searches for all solutions for Boolean oracles, since the standard Grover diffuser fails to find correct solutions for Boolean oracles in some logical structures!
