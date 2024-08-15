@@ -49,7 +49,7 @@ Instead, the GALA-*n* quantum library can be manually installed as stated in the
     Or, using this command:
 
     ```bash
-    python3 -m pip install -e .
+    python3 -m pip install .
     ```
 
 ## Usage
