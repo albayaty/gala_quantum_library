@@ -80,3 +80,44 @@ def GALA_CSX(n, gate="CSX", as_block=False, statistics=False):
 	    return GALA_gate.to_gate(label=gate+" gate\n\n(GALA-"+str(n)+")")
     else:
 	    return GALA_gate
+
+
+# ----------------------------------------------------------------------
+# Counting the number of gates of GALA_CSX():
+# ----------------------------------------------------------------------
+
+def num_gates_GALA_CSX(n):
+    """
+    This function counts the number of gates of GALA_CSX().
+    
+    Parameters
+    ----------
+    n: the number of qubits (n-1 controls and 1 target), where n >= 2.
+    
+    Returns
+    -------
+    The number of gates of GALA_CSX().
+    """
+    
+    # Consistency checking:    
+    if (n < 2):
+	    print(f"\n⟩⟩⟩ ERROR: The GALA_CSX should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: The GALA_CSX has n qubits (n-1 controls + 1 target), where n >= 2.\n")
+	    return
+    
+    H = 0
+    RZ = 0
+    CX = 0
+    
+    if (n == 2):
+	    H = 2
+	    RZ = 2
+	    CX = 1
+    else:
+	    H = 4
+	    RZ = (2**(n-1))+2
+	    CX = (2**(n-1))-1
+    
+    gates = H + RZ + CX
+    
+    return gates
