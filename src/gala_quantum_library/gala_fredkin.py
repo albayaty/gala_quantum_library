@@ -49,3 +49,35 @@ def GALA_Fredkin(n, as_block=False, statistics=False):
 	    return GALA_gate.to_gate(label="Fredkin gate\n\n(GALA-"+str(n)+")")
     else:
 	    return GALA_gate
+
+
+# ----------------------------------------------------------------------
+# Counting the number of gates of GALA_Fredkin():
+# ----------------------------------------------------------------------
+
+def num_gates_GALA_Fredkin(n):
+    """
+    This function counts the number of gates of GALA_Fredkin().
+    
+    Parameters
+    ----------
+    n: the number of qubits (n-1 controls and 1 target), where n >= 3.
+    
+    Returns
+    -------
+    The number of gates of GALA_Fredkin().
+    """
+    
+    # Consistency checking:    
+    if (n < 3):
+	    print(f"\n⟩⟩⟩ ERROR: The GALA_Fredkin should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: The GALA_Fredkin has n qubits (n-2 controls + 2 targets), where n >= 3.\n")
+	    return
+    
+    H = 2
+    RZ = 2**(n-1)
+    CX = (2**(n-1))+1
+    
+    gates = H + RZ + CX
+    
+    return gates
