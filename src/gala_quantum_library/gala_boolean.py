@@ -116,3 +116,34 @@ def GALA_Boolean(n, gate="AND", as_block=False, statistics=False):
 	    return GALA_gate.to_gate(label=gate+" gate\n\n(GALA-"+str(n)+")")
     else:
 	    return GALA_gate
+
+
+# ----------------------------------------------------------------------
+# Counting the number of gates of GALA_Boolean():
+# ----------------------------------------------------------------------
+
+def num_gates_GALA_Boolean(n):
+    """
+    This function counts the number of gates of GALA_Boolean().
+    
+    Parameters
+    ----------
+    n: the number of qubits (n-1 controls and 1 target), where n >= 3.
+    
+    Returns
+    -------
+    The number of gates of GALA_Boolean().
+    """
+    
+    # Consistency checking:    
+    if (n < 3):
+	    print(f"\n⟩⟩⟩ ERROR: The GALA_Boolean should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: The GALA_Boolean has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    return
+    
+    H = 2
+    RZ = 2**(n-1)
+    CX = (2**(n-1))-1    
+    gates = H + RZ + CX
+    
+    return gates
