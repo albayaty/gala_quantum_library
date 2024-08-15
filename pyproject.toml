@@ -3,15 +3,15 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "grover_controlled_diffuser"
-description = "Grover controlled-diffuser (CUs)"
+name = "gala_quantum_library"
+description = "GALA-n Quantum Library"
 version = "1.1"
 readme = { file = "README.md", content-type = "text/markdown" }
 license = { file = "LICENSE" }
 authors = [
     { name = "Ali Al-Bayaty", email = "albayaty@pdx.edu" },
 ]
-keywords = ["qiskit", "quantum", "quantum computing", "Grover algorithm", "Grover diffusion operator", "Grover diffuser"]
+keywords = ["qiskit", "quantum", "quantum computing", "quantum gates", "quantum layouts", "Bloch sphere", "transpilation"]
 classifiers = [	
 	"Development Status :: 5 - Production/Stable",
 	"Intended Audience :: Developers",
@@ -33,7 +33,7 @@ dynamic = ["dependencies"]
 
 [project.urls]
 Homepage = "https://github.com/albayaty"
-Repository = "https://github.com/albayaty/grover_controlled_diffuser"
+Repository = "https://github.com/albayaty/gala_quantum_library"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
