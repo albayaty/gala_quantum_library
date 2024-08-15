@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grover_controlled_diffuser"
+description = "Grover controlled-diffuser (CUs)"
+version = "1.1"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ali Al-Bayaty", email = "albayaty@pdx.edu" },
+]
+keywords = ["qiskit", "quantum", "quantum computing", "Grover algorithm", "Grover diffusion operator", "Grover diffuser"]
+classifiers = [	
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: Developers",
+	"Intended Audience :: Science/Research",
+	"License :: OSI Approved :: Apache Software License",
+	"Operating System :: MacOS",
+	"Operating System :: POSIX :: Linux",
+	"Operating System :: Microsoft :: Windows",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.9"
+# Check the `tool.setuptools.dynamic` table:
+dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://github.com/albayaty"
+Repository = "https://github.com/albayaty/grover_controlled_diffuser"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt" }
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
