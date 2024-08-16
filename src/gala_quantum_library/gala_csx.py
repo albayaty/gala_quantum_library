@@ -31,6 +31,11 @@ def GALA_CSX(n, gate="CSX", as_block=False, statistics=False):
     """
     
     # Consistency checking:
+    if (n < 2):
+	    print(f"\n⟩⟩⟩ ERROR: GALA_CSX() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_CSX() has n qubits (n-1 controls + 1 target), where n >= 2.\n")
+	    return
+    
     gates = ["CSX", "CSXdg"]
     if gate not in gates:
 	    print(f"\n⟩⟩⟩ ERROR: The '{gate}' gate is not supported by GALA_CSX()!")
@@ -99,10 +104,10 @@ def num_gates_GALA_CSX(n):
     The number of gates of GALA_CSX().
     """
     
-    # Consistency checking:    
+    # Consistency checking:
     if (n < 2):
-	    print(f"\n⟩⟩⟩ ERROR: The GALA_CSX should have more than {n} qubits!")
-	    print(f"⟩⟩⟩  INFO: The GALA_CSX has n qubits (n-1 controls + 1 target), where n >= 2.\n")
+	    print(f"\n⟩⟩⟩ ERROR: GALA_CSX() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_CSX() has n qubits (n-1 controls + 1 target), where n >= 2.\n")
 	    return
     
     H = 0
