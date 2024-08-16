@@ -29,6 +29,11 @@ def GALA_Boolean(n, gate="AND", as_block=False, statistics=False):
     """
     
     # Consistency checking:
+    if (n < 3):
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Boolean() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Boolean() has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    return
+    
     gates = ["AND", "NAND", "OR", "NOR", "IMP", "INH"]
     if gate not in gates:
 	    print(f"\n⟩⟩⟩ ERROR: The '{gate}' gate is not supported by GALA_Boolean()!")
@@ -135,10 +140,10 @@ def num_gates_GALA_Boolean(n):
     The number of gates of GALA_Boolean().
     """
     
-    # Consistency checking:    
+    # Consistency checking:
     if (n < 3):
-	    print(f"\n⟩⟩⟩ ERROR: The GALA_Boolean should have more than {n} qubits!")
-	    print(f"⟩⟩⟩  INFO: The GALA_Boolean has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Boolean should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Boolean has n qubits (n-1 controls + 1 target), where n >= 3.\n")
 	    return
     
     H = 2
