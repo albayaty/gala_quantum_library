@@ -50,3 +50,35 @@ def GALA_Miller(n, as_block=False, statistics=False):
 	    return GALA_gate.to_gate(label="Miller gate\n\n(GALA-"+str(n)+")")
     else:
 	    return GALA_gate
+
+
+# ----------------------------------------------------------------------
+# Counting the number of gates of GALA_Miller():
+# ----------------------------------------------------------------------
+
+def num_gates_GALA_Miller(n):
+    """
+    This function counts the number of gates of GALA_Miller().
+    
+    Parameters
+    ----------
+    n: the number of qubits (n-1 controls and 1 target), where n >= 3.
+    
+    Returns
+    -------
+    The number of gates of GALA_Miller().
+    """
+    
+    # Consistency checking:    
+    if (n < 3):
+	    print(f"\n⟩⟩⟩ ERROR: The GALA_Miller should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: The GALA_Miller has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    return
+    
+    H = 2
+    RZ = 2**(n-1)
+    CX = (2**(n-1))-1+((n-1)*2)
+    
+    gates = H + RZ + CX
+    
+    return gates
