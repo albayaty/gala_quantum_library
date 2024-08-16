@@ -142,8 +142,8 @@ def num_gates_GALA_Boolean(n):
     
     # Consistency checking:
     if (n < 3):
-	    print(f"\n⟩⟩⟩ ERROR: GALA_Boolean should have more than {n} qubits!")
-	    print(f"⟩⟩⟩  INFO: GALA_Boolean has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Boolean() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Boolean() has n qubits (n-1 controls + 1 target), where n >= 3.\n")
 	    return
     
     H = 2
