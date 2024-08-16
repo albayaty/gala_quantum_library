@@ -25,6 +25,12 @@ def GALA_Miller(n, as_block=False, statistics=False):
     available at https://doi.org/10.48550/arXiv.2311.06760
     """
     
+    # Consistency checking:
+    if (n < 3):
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Miller() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Miller() has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    return
+    
     # The indices of n-1 controls and 1 target of a gate:
     controls = list(range(n-1))
     target = n-1
@@ -69,10 +75,10 @@ def num_gates_GALA_Miller(n):
     The number of gates of GALA_Miller().
     """
     
-    # Consistency checking:    
+    # Consistency checking:
     if (n < 3):
-	    print(f"\n⟩⟩⟩ ERROR: The GALA_Miller should have more than {n} qubits!")
-	    print(f"⟩⟩⟩  INFO: The GALA_Miller has n qubits (n-1 controls + 1 target), where n >= 3.\n")
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Miller() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Miller() has n qubits (n-1 controls + 1 target), where n >= 3.\n")
 	    return
     
     H = 2
