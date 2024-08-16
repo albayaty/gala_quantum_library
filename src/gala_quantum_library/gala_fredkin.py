@@ -61,7 +61,7 @@ def num_gates_GALA_Fredkin(n):
     
     Parameters
     ----------
-    n: the number of qubits (n-1 controls and 1 target), where n >= 3.
+    n: the number of qubits (n-2 controls and 2 targets), where n >= 3.
     
     Returns
     -------
