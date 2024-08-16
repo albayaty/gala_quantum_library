@@ -24,6 +24,12 @@ def GALA_Fredkin(n, as_block=False, statistics=False):
     For more information, please read our GALA-n paper, 
     available at https://doi.org/10.48550/arXiv.2311.06760
     """
+
+    # Consistency checking:
+    if (n < 3):
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Fredkin() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Fredkin() has n qubits (n-2 controls + 2 targets), where n >= 3.\n")
+	    return
     
     # The indices of n-2 controls and 2 targets of a gate:
     controls = list(range(n-2))
@@ -68,10 +74,10 @@ def num_gates_GALA_Fredkin(n):
     The number of gates of GALA_Fredkin().
     """
     
-    # Consistency checking:    
+    # Consistency checking:
     if (n < 3):
-	    print(f"\n⟩⟩⟩ ERROR: The GALA_Fredkin should have more than {n} qubits!")
-	    print(f"⟩⟩⟩  INFO: The GALA_Fredkin has n qubits (n-2 controls + 2 targets), where n >= 3.\n")
+	    print(f"\n⟩⟩⟩ ERROR: GALA_Fredkin() should have more than {n} qubits!")
+	    print(f"⟩⟩⟩  INFO: GALA_Fredkin() has n qubits (n-2 controls + 2 targets), where n >= 3.\n")
 	    return
     
     H = 2
