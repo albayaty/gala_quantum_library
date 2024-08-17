@@ -1,3 +1,12 @@
 tox>=4.0
+
+# Style:
+black[jupyter]>=24.1
+
+# Lint:
+ruff>=0.0.267
+
+# Tests:
 pytest>=7.0
 pytest-cov>=3.0
+coverage>=4.4.0
