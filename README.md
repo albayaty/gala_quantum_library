@@ -18,11 +18,13 @@ GALA-*n* quantum library has a set of cost-effective *n*-bit gates, including:
 * ***n*-bit Miller gates:** quantum distance gates, where *n* >= 3 qubits.
 * ***n*-bit controlled square-root of Pauli-X (X) gates:** controlled-√X (as controlled-V) and controlled-√X† (as controlled-V†) gates, where *n* >= 2 qubits.
 
-The cost-effectiveness of these *n*-bit gates of GALA-*n* quantum library comes from the following essential configurations:
+The cost-effectiveness of these *n*-bit gates of GALA-*n* quantum library comes from the following essential configurations as well as their symmetrical structures as shown in the figure below:
 
 1. All control qubits of an *n*-bit gate are only connected to the target qubit, without any mutual connection among them. For instance, all control qubits are connected to a target qubit using Feynman (CX) gates.
 2. The target qubit of an *n*-bit gate can be replaced with any of the control qubits. For instance, the target qubit can be mapped in the middle among the control qubits, to fit the layout of an IBM quantum computer efficiently.
 3. Based on (1) and (2), SWAP gates are no longer required to connect the non-neighboring physical qubits of an IBM quantum computer for the final transpiled *n*-bit gates.
+
+![GALA-gate](images/gate-GALA-n.png "The symmetrical structure of an n-bit gate of GALA-n")
 
 Experimentally, from the above-mentioned essential configurations, the final transpiled quantum circuits constructed from *n*-bit gates of GALA-*n* quantum library always have lower quantum costs and fewer depths than those constructed from standard *n*-bit quantum gates, e.g., *n*-bit Toffoli and *n*-bit Fredkin gates, for IBM quantum computers.
 
