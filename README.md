@@ -1,10 +1,10 @@
 # GALA-*n* Quantum Library
 
 [![Tests](https://github.com/albayaty/gala_quantum_library/actions/workflows/tests.yml/badge.svg)](https://github.com/albayaty/gala_quantum_library/actions/workflows/tests.yml)
-[![Jupyter](https://img.shields.io/badge/Jupyter-notebook-blue.svg?logo=jupyter)](https://jupyter.org)
-[![Python](https://img.shields.io/badge/Python-%E2%89%A5%203.9-blue.svg?logo=python&logoColor=yellow)](https://www.python.org)
-[![Qiskit](https://img.shields.io/badge/Qiskit-%E2%89%A5%201.0-blue.svg?logo=qiskit)](https://www.ibm.com/quantum/qiskit)
-[![Ecosystem](https://img.shields.io/badge/Qiskit-ecosystem-blue.svg?logo=qiskit)](https://www.ibm.com/quantum/ecosystem)
+[![Jupyter](https://img.shields.io/badge/Jupyter-notebook-blue.svg)](https://jupyter.org)
+[![Python](https://img.shields.io/badge/Python-%E2%89%A5%203.9-blue.svg)](https://www.python.org)
+[![Qiskit](https://img.shields.io/badge/Qiskit-%E2%89%A5%201.0-blue.svg)](https://www.ibm.com/quantum/qiskit)
+[![Ecosystem](https://img.shields.io/badge/Qiskit-ecosystem-blue.svg)](https://www.ibm.com/quantum/ecosystem)
 ![Platforms](https://img.shields.io/badge/Platforms-Linux%20%7C%20macOS%20%7C%20Windows-blue)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)
 
