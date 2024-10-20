@@ -312,9 +312,9 @@ Or, using BibTeX style:
 ```bibtex
 @article{galaquantumlibrary,
     title={GALA-n: Generic architecture of layout-aware n-bit quantum operators for cost-effective realization on IBM quantum computers},
-    author={Al-Bayaty, Ali and Perkowski, Marek},
+    author={Ali Al-Bayaty and Marek Perkowski},
     journal={arXiv preprint arXiv:2311.06760},
-    note={GALA-n quantum library is available at \url{https://doi.org/10.48550/arXiv.2311.06760}},
-    year={2023}
+    year={2023},
+    url={https://doi.org/10.48550/arXiv.2311.06760}
 }
 ```
